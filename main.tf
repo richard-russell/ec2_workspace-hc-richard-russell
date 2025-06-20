@@ -1,12 +1,12 @@
-  # Create an EC2 Instance
-  resource "aws_instance" "ec2_workspace" {
-  ami                         = data.aws_ami.ubuntu20.id
-  instance_type               = var.instance_type
+# Create an EC2 Instance
+resource "aws_instance" "ec2_workspace" {
+  ami           = data.aws_ami.ubuntu20.id
+  instance_type = var.instance_type
   tags = {
     Name = "tops-beetle-instance"
   }
-  }
-  
+}
+
 # Create a random pet
 resource "random_pet" "random" {}
 

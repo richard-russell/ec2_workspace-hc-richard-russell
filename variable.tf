@@ -1,4 +1,4 @@
-  ## variables.tf
+## variables.tf
 
 ## This file is for variables you would like the user to provide when deploying
 ## the demo. Put `ddr_` variables in ddr-variables.tf.
