@@ -23,3 +23,18 @@ data "aws_ami" "ubuntu20" {
   }
   owners = ["099720109477"] # Canonical
 }
+
+resource "aws_s3_bucket" "imported_bucket" {
+  bucket              = "curious-tortoise-bucket"
+  bucket_prefix       = null
+  force_destroy       = false
+  object_lock_enabled = false
+  region              = "us-west-2"
+  tags = {
+    owner = "hc-richard-russell"
+  }
+  tags_all = {
+    customer = "hashicat-inc"
+    owner    = "hc-richard-russell"
+  }
+}
